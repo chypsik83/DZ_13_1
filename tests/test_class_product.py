@@ -25,3 +25,7 @@ def test_init_product(test_product):
     assert test_product.description == "Фрукты"
     assert test_product.price == 20.1
     assert test_product.quantity == 20
+
+
+def test_counter_product(test_category):
+    assert test_category.counter_product == 0

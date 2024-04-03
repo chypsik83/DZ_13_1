@@ -20,17 +20,11 @@ def test__init(category, products):
     assert category.products == products
 
 
-def test_product():
-    products = [Product("Яблоко", "Россия", 10.99, 100),
-                Product("Банан", "Импорт", 20.50, 50)]
-    category = Category("Фрукты", "Производитель", products)
+def test_product(category, products):
     assert Category.counter_product == 2
 
 
-def test_category():
-    products = [Product("Яблоко", "Россия", 10.99, 100),
-                Product("Банан", "Импорт", 20.50, 50)]
-    category = Category("Фрукты", "Производитель", products)
+def test_category(category, products):
     assert Category.total_categories == 1
 
 

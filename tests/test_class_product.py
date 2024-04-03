@@ -11,7 +11,7 @@ def products():
 
 @pytest.fixture
 def category(products):
-    Category("Фрукты", "Производитель", products)
+    return Category("Фрукты", "Производитель", products)
 
 
 def test__init(category, products):
@@ -21,11 +21,11 @@ def test__init(category, products):
 
 
 def test_product(category, products):
-    assert Category.counter_product == 2
+    assert Category.counter_product == 4
 
 
 def test_category(category, products):
-    assert Category.total_categories == 1
+    assert Category.total_categories == 3
 
 
 @pytest.fixture
